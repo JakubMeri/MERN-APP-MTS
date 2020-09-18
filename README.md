@@ -1,1 +1,2 @@
-# Momentálne je spojazdnená len verzia pre desktop a notebook.
+## Momentálne je spojazdnená len verzia pre desktop a notebook.
+> Ide o MERN aplikáciu
