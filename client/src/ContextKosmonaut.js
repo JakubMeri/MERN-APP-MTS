@@ -48,14 +48,14 @@ export const KosmonautProvider = ({ children }) => {
         break;
 
       default:
-        setFiltered((prev) => (prev.filtered = kosmonaut));
+        setFiltered((prev) => (prev = kosmonaut));
         break;
     }
   };
 
   return (
     <KosmonautContext.Provider
-      value={[filtered, setFiltered, loading, select, setKosmonaut]}
+      value={[filtered, setFiltered, loading, select, setKosmonaut, kosmonaut]}
     >
       {children}
     </KosmonautContext.Provider>

@@ -4,7 +4,7 @@ import { KosmonautContext } from "../../../ContextKosmonaut";
 import "./UpdateUser.css";
 
 function UpdateUser({ updated, showModal, modal }) {
-  const [filtered, setFiltered, , , setKosmonaut] = useContext(
+  const [filtered, setFiltered, , , setKosmonaut, kosmonaut] = useContext(
     KosmonautContext
   );
 
@@ -35,14 +35,19 @@ function UpdateUser({ updated, showModal, modal }) {
       schopnost: schopnost,
     };
     const id = filtered.findIndex((id) => id._id === updated[0]._id);
+    const idKosmonauts = kosmonaut.findIndex((id) => id._id === updated[0]._id);
     const updatedKosmonauts = [...filtered];
+    const updatedKosmonautsReal = [...kosmonaut];
     updatedKosmonauts.splice(id, 1, newKosmonaut);
-    setFiltered(updatedKosmonauts);
-    setKosmonaut(updatedKosmonauts);
+    updatedKosmonautsReal.splice(id, 1, newKosmonaut);
+    console.log(updatedKosmonauts);
+    console.log(updatedKosmonautsReal);
     axios
       .put(`/api/kosmonauti/${updated[0]._id}`, newKosmonaut)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
+    setFiltered(updatedKosmonauts);
+    setKosmonaut(updatedKosmonautsReal);
     showModal(!modal);
     setMeno("");
     setPriezvisko("");
