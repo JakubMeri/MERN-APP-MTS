@@ -10,7 +10,7 @@ export const KosmonautProvider = ({ children }) => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get("http://localhost:5000/api/kosmonauti").then((data) => {
+    axios.get("/api/kosmonauti").then((data) => {
       setKosmonaut(data.data);
       setFiltered(data.data);
       setLoading(false);

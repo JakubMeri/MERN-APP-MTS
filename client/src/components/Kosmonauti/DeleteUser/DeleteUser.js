@@ -11,7 +11,7 @@ function DeleteUser({ deleteId, setDeleteModal, deleteModal }) {
     let dataLoad = filtered.filter((item) => item._id !== deleteId);
 
     axios
-      .delete(`http://localhost:5000/api/kosmonauti/${deleteId}`)
+      .delete(`/api/kosmonauti/${deleteId}`)
       .then((res) => {
         setFiltered(dataLoad);
         setDeleteModal(!deleteModal);

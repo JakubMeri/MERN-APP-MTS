@@ -37,10 +37,7 @@ function UpdateUser({ updated, showModal, modal }) {
     updatedKosmonauts.splice(id, 1, newKosmonaut);
     setFiltered(updatedKosmonauts);
     axios
-      .put(
-        `http://localhost:5000/api/kosmonauti/${updated[0]._id}`,
-        newKosmonaut
-      )
+      .put(`/api/kosmonauti/${updated[0]._id}`, newKosmonaut)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
     showModal(!modal);

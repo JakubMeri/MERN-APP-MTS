@@ -82,7 +82,7 @@ function NovyKosmonaut() {
         loadDate: datum,
       };
       axios
-        .post("http://localhost:5000/api/kosmonauti", newKosmonaut)
+        .post("/api/kosmonauti", newKosmonaut)
         .then((res) => {
           setFiltered([...filtered, res.data]);
           setKosmonaut((prev) => [...prev, res.data]);
