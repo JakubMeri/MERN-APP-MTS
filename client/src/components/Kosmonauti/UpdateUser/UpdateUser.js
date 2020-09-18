@@ -4,7 +4,9 @@ import { KosmonautContext } from "../../../ContextKosmonaut";
 import "./UpdateUser.css";
 
 function UpdateUser({ updated, showModal, modal }) {
-  const [filtered, setFiltered] = useContext(KosmonautContext);
+  const [filtered, setFiltered, , , setKosmonaut] = useContext(
+    KosmonautContext
+  );
 
   const [meno, setMeno] = useState(updated[0].meno);
   const [priezvisko, setPriezvisko] = useState(updated[0].priezvisko);
@@ -36,6 +38,7 @@ function UpdateUser({ updated, showModal, modal }) {
     const updatedKosmonauts = [...filtered];
     updatedKosmonauts.splice(id, 1, newKosmonaut);
     setFiltered(updatedKosmonauts);
+    setKosmonaut(updatedKosmonauts);
     axios
       .put(`/api/kosmonauti/${updated[0]._id}`, newKosmonaut)
       .then((res) => console.log(res))
