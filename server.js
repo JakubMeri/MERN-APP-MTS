@@ -22,14 +22,6 @@ app.use((req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 
-//PRODUKCIA
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
-
 //DB_CONFIG
 
 const db = require("./config/keys").mongoURI;
@@ -41,6 +33,15 @@ mongoose
   .then(() => console.log("CONNECTED"))
   .catch((err) => console.log(err));
 
-app.listen(PORT, () => console.log(`SERVER RUNNING ON PORT ${PORT}`));
-
+//ROUTES
 app.use("/api/kosmonauti", kosmonauti);
+
+//PRODUKCIA
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
+app.listen(PORT, () => console.log(`SERVER RUNNING ON PORT ${PORT}`));
