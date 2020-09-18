@@ -39,7 +39,7 @@ function UpdateUser({ updated, showModal, modal }) {
     const updatedKosmonauts = [...filtered];
     const updatedKosmonautsReal = [...kosmonaut];
     updatedKosmonauts.splice(id, 1, newKosmonaut);
-    updatedKosmonautsReal.splice(id, 1, newKosmonaut);
+    updatedKosmonautsReal.splice(idKosmonauts, 1, newKosmonaut);
     console.log(updatedKosmonauts);
     console.log(updatedKosmonautsReal);
     axios
