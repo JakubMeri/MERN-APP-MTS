@@ -8,7 +8,7 @@ import Tabulka from "./Tabulka/Tabulka";
 
 function KosmonautiList() {
   //CONTEXT
-  const [filtered, setFiltered, loading] = useContext(KosmonautContext);
+  const [filtered, setFiltered, loading, ,] = useContext(KosmonautContext);
   //STATES
   const [updated, setUpdated] = useState({});
   const [modal, showModal] = useState(false);
@@ -59,8 +59,8 @@ function KosmonautiList() {
       ) : null}
       <div className="table">
         <Tabulka
-          loadModal={loadModal}
           filtered={filtered}
+          loadModal={loadModal}
           showDeleteModal={showDeleteModal}
         />
         {loading ? <div className="loader"></div> : null}
