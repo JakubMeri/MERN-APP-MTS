@@ -1,0 +1,78 @@
+$primary-color: #4361ee;
+$second-color: #1838c7;
+$cell-color: rgb(177, 177, 177);
+
+.update-box {
+  position: fixed;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 500px;
+  background: linear-gradient($primary-color, $second-color);
+  border: solid 2px white;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  .form-update {
+    height: 100%;
+    padding: 20px;
+    label {
+      font-weight: bold;
+    }
+    input {
+      height: 30px;
+      padding-left: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+    h1 {
+      font-family: "Bebas Neue", cursive;
+      text-align: center;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    button {
+      position: relative;
+      font-family: "Bebas Neue", cursive;
+      margin-top: 40px;
+      height: 45px;
+      background: white;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: white;
+      background: transparent;
+      border: none;
+      border-radius: 5px;
+      z-index: 1;
+      transition: 0.3s;
+      font-size: 25px;
+      border: solid 1px white;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 0%;
+        background: white;
+        transition: 0.3s;
+        z-index: -1;
+        border-radius: 5px;
+      }
+      &:hover {
+        color: black;
+        border: white;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+}

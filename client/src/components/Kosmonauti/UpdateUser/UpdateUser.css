@@ -1,0 +1,92 @@
+.update-box {
+  position: fixed;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 500px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4361ee), to(#1838c7));
+  background: linear-gradient(#4361ee, #1838c7);
+  border: solid 2px white;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.update-box .form-update {
+  height: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.update-box .form-update label {
+  font-weight: bold;
+}
+
+.update-box .form-update input {
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.update-box .form-update h1 {
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+}
+
+.update-box .form-update button {
+  position: relative;
+  font-family: "Bebas Neue", cursive;
+  margin-top: 40px;
+  height: 45px;
+  background: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  z-index: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 25px;
+  border: solid 1px white;
+}
+
+.update-box .form-update button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  background: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.update-box .form-update button:hover {
+  color: black;
+  border: white;
+}
+
+.update-box .form-update button:hover::before {
+  width: 100%;
+}
+/*# sourceMappingURL=UpdateUser.css.map */

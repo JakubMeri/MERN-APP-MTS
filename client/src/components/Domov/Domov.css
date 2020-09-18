@@ -1,0 +1,154 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: black;
+}
+
+.full-screen-video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.overlay {
+  font-family: "Bebas Neue", cursive;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.overlay aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: 1.5s load forwards linear;
+          animation: 1.5s load forwards linear;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0px 0px 5px black;
+          box-shadow: 0px 0px 5px black;
+}
+
+.overlay aside h1 {
+  opacity: 0;
+  color: white;
+  position: relative;
+  padding: 0px 10px;
+  font-size: 30px;
+  -webkit-animation: show 0.3s linear forwards;
+          animation: show 0.3s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.overlay aside h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background: #4361ee;
+}
+
+.overlay aside .link-button {
+  opacity: 0;
+  position: relative;
+  padding: 10px 70px;
+  color: white;
+  border: solid 2px #4361ee;
+  text-decoration: none;
+  font-size: 23px;
+  margin-top: 50px;
+  -webkit-animation: show 0.3s linear forwards;
+          animation: show 0.3s linear forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.overlay aside .link-button::before {
+  content: "";
+  position: absolute;
+  left: -10%;
+  top: 0;
+  height: 100%;
+  width: 20px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(rgba(255, 255, 255, 0.2)), to(transparent));
+  background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.2), transparent);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.overlay aside .link-button:hover::before {
+  left: 100%;
+}
+
+@-webkit-keyframes load {
+  from {
+    width: 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  to {
+    width: 50%;
+    -webkit-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes load {
+  from {
+    width: 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  to {
+    width: 50%;
+    -webkit-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=Domov.css.map */

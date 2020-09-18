@@ -1,0 +1,63 @@
+$primary-color: #4361ee;
+$second-color: #1838c7;
+$cell-color: rgb(177, 177, 177);
+table {
+  border-collapse: collapse;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: $cell-color;
+  thead {
+    font-family: "Bebas Neue", cursive;
+    font-size: 22px;
+    position: sticky;
+    background: linear-gradient($primary-color, $second-color);
+    top: 0;
+    color: black;
+    tr {
+      height: 40px;
+
+      th {
+        padding: 10px;
+        width: 200px;
+        height: auto;
+      }
+    }
+  }
+  tbody {
+    tr {
+      height: 30px;
+      cursor: pointer;
+      transition: 0.1s;
+
+      td {
+        padding: 10px;
+        width: 200px;
+        height: auto;
+      }
+      &:nth-child(odd) {
+        background: rgba(0, 0, 0, 0.1);
+      }
+      &:hover {
+        color: white;
+        background: linear-gradient(rgba(38, 59, 253, 0.4), transparent);
+      }
+    }
+  }
+}
+.delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: $cell-color;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    color: $primary-color;
+    text-shadow: 0px 0px 1px black;
+    transform: scale(1.1);
+  }
+  & > i {
+    pointer-events: none;
+  }
+}

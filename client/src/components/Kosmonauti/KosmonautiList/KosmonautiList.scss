@@ -1,0 +1,28 @@
+$primary-color: #4361ee;
+$second-color: #1838c7;
+$cell-color: rgb(177, 177, 177);
+.table {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 30px;
+}
+
+.loader {
+  margin: 30px auto;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-bottom: solid 2px white;
+  border-top: solid 2px white;
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

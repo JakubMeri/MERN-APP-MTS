@@ -1,0 +1,72 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #b1b1b1;
+}
+
+table thead {
+  font-family: "Bebas Neue", cursive;
+  font-size: 22px;
+  position: -webkit-sticky;
+  position: sticky;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4361ee), to(#1838c7));
+  background: linear-gradient(#4361ee, #1838c7);
+  top: 0;
+  color: black;
+}
+
+table thead tr {
+  height: 40px;
+}
+
+table thead tr th {
+  padding: 10px;
+  width: 200px;
+  height: auto;
+}
+
+table tbody tr {
+  height: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+table tbody tr td {
+  padding: 10px;
+  width: 200px;
+  height: auto;
+}
+
+table tbody tr:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+table tbody tr:hover {
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 59, 253, 0.4)), to(transparent));
+  background: linear-gradient(rgba(38, 59, 253, 0.4), transparent);
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: #b1b1b1;
+  cursor: pointer;
+  outline: none;
+}
+
+.delete-btn:hover {
+  color: #4361ee;
+  text-shadow: 0px 0px 1px black;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.delete-btn > i {
+  pointer-events: none;
+}
+/*# sourceMappingURL=Tabulka.css.map */

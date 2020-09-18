@@ -1,0 +1,94 @@
+.delete-box {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 300px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4361ee), to(#1838c7));
+  background: linear-gradient(#4361ee, #1838c7);
+  border: solid 2px white;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+}
+
+.delete-box h2 {
+  font-size: 30px;
+}
+
+.delete-box .btn-group {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.delete-box span {
+  color: white;
+}
+
+.delete-box button {
+  position: relative;
+  font-family: inherit;
+  font-size: 20px;
+  width: 100px;
+  height: 40px;
+  color: white;
+  border: solid 1px white;
+  background: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0px 0px 2px white;
+          box-shadow: inset 0px 0px 2px white;
+  z-index: 1;
+  transition: 0.3s;
+  outline: none;
+}
+
+.delete-box button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  background: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.delete-box button:hover {
+  color: black;
+  border: white;
+}
+
+.delete-box button:hover::before {
+  width: 100%;
+}
+/*# sourceMappingURL=DeleteUser.css.map */
