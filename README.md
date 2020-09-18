@@ -1,2 +1,2 @@
 ## Momentálne je spojazdnená len verzia pre desktop a notebook.
-> Ide o MERN aplikáciu
+> MERN aplikácia na správu kozmonautov
