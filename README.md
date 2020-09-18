@@ -1,1 +1,1 @@
-# MERN-APP-MTS
+# Momentálne je spojazdnená len verzia pre desktop a notebook.
