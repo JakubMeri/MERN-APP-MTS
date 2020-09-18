@@ -4,7 +4,9 @@ import "./DeleteUser.css";
 import axios from "axios";
 
 function DeleteUser({ deleteId, setDeleteModal, deleteModal }) {
-  const [filtered, setFiltered] = useContext(KosmonautContext);
+  const [filtered, setFiltered, , , setKosmonaut] = useContext(
+    KosmonautContext
+  );
 
   const [selectedKosmonaut] = filtered.filter((item) => item._id === deleteId);
   const deleteKosmonaut = () => {
@@ -14,6 +16,7 @@ function DeleteUser({ deleteId, setDeleteModal, deleteModal }) {
       .delete(`/api/kosmonauti/${deleteId}`)
       .then((res) => {
         setFiltered(dataLoad);
+        setKosmonaut(dataLoad);
         setDeleteModal(!deleteModal);
       })
       .catch((err) => console.log(err));
