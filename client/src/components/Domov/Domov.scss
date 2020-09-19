@@ -39,7 +39,7 @@ $primary-color: #4361ee;
       color: white;
       position: relative;
       padding: 0px 10px;
-      font-size: 30px;
+      font-size: 25px;
       animation: show 0.3s linear forwards;
       animation-delay: 1.5s;
       &::before {
@@ -104,5 +104,10 @@ $primary-color: #4361ee;
   }
   to {
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    display: none;
   }
 }
