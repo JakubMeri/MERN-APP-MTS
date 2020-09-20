@@ -5,7 +5,7 @@ $primary-color: #4361ee;
   left: 0;
   width: 100%;
   height: 50px;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 1);
   z-index: 2;
   display: flex;
   align-items: center;
@@ -69,4 +69,59 @@ $primary-color: #4361ee;
     height: 4px !important;
     background: white !important;
   }
+}
+.mobile-menu {
+  display: none;
+}
+.mobile-menu-btn {
+  display: none;
+}
+@media only screen and (max-width: 760px) {
+  .nav-links-group {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: white;
+    border: none;
+    position: relative;
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    outline: none;
+  }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+    z-index: 100;
+    background: black;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 0.4s;
+    .nav-link-mobile {
+      font-family: "Bebas Neue", cursive;
+      font-size: 35px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+      margin: 20px 0px;
+    }
+  }
+}
+.closed {
+  right: -100%;
+}
+.open {
+  right: 0;
 }

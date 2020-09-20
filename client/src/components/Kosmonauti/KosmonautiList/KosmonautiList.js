@@ -1,12 +1,14 @@
 import React, { useState, useContext } from "react";
+import { withRouter } from "react-router-dom";
 import "./KosmonautiList.css";
 import { KosmonautContext } from "../../../ContextKosmonaut";
 import UpdateUser from "../UpdateUser/UpdateUser";
 import Modal from "../Modal/Modal";
 import DeleteUser from "../DeleteUser/DeleteUser";
 import Tabulka from "./Tabulka/Tabulka";
+import Search from "../../Search/Search";
 
-function KosmonautiList() {
+function KosmonautiList({ location }) {
   //CONTEXT
   const [filtered, setFiltered, loading, ,] = useContext(KosmonautContext);
   //STATES
@@ -64,9 +66,10 @@ function KosmonautiList() {
           showDeleteModal={showDeleteModal}
         />
         {loading ? <div className="loader"></div> : null}
+        {window.innerWidth > 760 ? null : <Search location={location} />}
       </div>
     </>
   );
 }
 
-export default KosmonautiList;
+export default withRouter(KosmonautiList);

@@ -1,0 +1,33 @@
+$primary-color: #4361ee;
+$second-color: #1838c7;
+.btn-new-kosmonaut {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  .btn-new-kosmonaut {
+    display: block;
+    position: fixed;
+    left: 10px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background: $primary-color;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    border: solid 2px $primary-color;
+    box-shadow: 0px 0px 5px $second-color;
+    outline: none;
+    transition: 0.5s;
+  }
+}
+
+.hide {
+  bottom: -100% !important;
+}
+.show {
+  bottom: 40px !important;
+}

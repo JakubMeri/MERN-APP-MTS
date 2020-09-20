@@ -7,5 +7,13 @@
       grid-template-columns: 20% 80%;
   background: -webkit-gradient(linear, left top, left bottom, from(#333), to(black));
   background: linear-gradient(#333, black);
+  position: relative;
+}
+
+@media only screen and (max-width: 500px) {
+  .kosmonauti-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=Kosmonauti.css.map */

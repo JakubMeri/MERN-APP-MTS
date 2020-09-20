@@ -4,4 +4,11 @@
   display: grid;
   grid-template-columns: 20% 80%;
   background: linear-gradient(#333, black);
+  position: relative;
+}
+
+@media only screen and (max-width: 500px) {
+  .kosmonauti-container {
+    grid-template-columns: 1fr;
+  }
 }

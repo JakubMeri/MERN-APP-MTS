@@ -71,3 +71,8 @@ $cell-color: rgb(177, 177, 177);
     }
   }
 }
+@media only screen and (max-width: 500px) {
+  .delete-box {
+    width: 95%;
+  }
+}

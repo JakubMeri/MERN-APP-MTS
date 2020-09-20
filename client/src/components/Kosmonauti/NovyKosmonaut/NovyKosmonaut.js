@@ -2,6 +2,7 @@ import React, { useState, useContext, useRef } from "react";
 import "./NovyKosmonaut.css";
 import { KosmonautContext } from "../../../ContextKosmonaut";
 import axios from "axios";
+import NovyMobile from "./NovyMobile/NovyMobile";
 
 function NovyKosmonaut() {
   //STATES
@@ -12,6 +13,7 @@ function NovyKosmonaut() {
   const [btnPosition, setBtnPosition] = useState(null);
   const [valid, setValid] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
+  const [panel, setPanel] = useState(false);
 
   //REFS
   const btnRef = useRef();
@@ -67,6 +69,7 @@ function NovyKosmonaut() {
         setValid(true);
       }, 2000);
     }
+
     //SET NEW COSMONAUT
     else {
       setErrorMessage("PŘIDANÉ!");
@@ -92,11 +95,15 @@ function NovyKosmonaut() {
       setPriezvisko("");
       setDatum("");
       setSchopnost("");
+
+      setPanel(!panel);
     }
   };
 
   return (
-    <div className="input-component">
+    <div
+      className={`input-component ${!panel ? "closed-panel" : "opened-panel"}`}
+    >
       <form onSubmit={addKosmonaut} className="form">
         <h1>Nový kosmonaut</h1>
         <label htmlFor="meno">Jméno:</label>
@@ -165,6 +172,10 @@ function NovyKosmonaut() {
           {errorMessage === "" ? "Vyplň všechny pole!" : `${errorMessage}`}
         </div>
       ) : null}
+      <button onClick={() => setPanel(!panel)} className="close-panel">
+        <i className="fas fa-times"></i>
+      </button>
+      <NovyMobile panel={panel} setPanel={setPanel} />
     </div>
   );
 }

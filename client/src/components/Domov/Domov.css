@@ -153,8 +153,20 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .container {
-    display: none;
+  .overlay aside {
+    -webkit-animation: none;
+            animation: none;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .overlay aside h1 {
+    margin: 50px 0px;
+  }
+  .overlay aside h1::before {
+    height: 0;
   }
 }
 /*# sourceMappingURL=Domov.css.map */

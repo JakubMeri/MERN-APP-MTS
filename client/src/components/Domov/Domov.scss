@@ -107,7 +107,19 @@ $primary-color: #4361ee;
   }
 }
 @media only screen and (max-width: 500px) {
-  .container {
-    display: none;
+  .overlay {
+    aside {
+      animation: none;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      width: 100%;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      h1 {
+        margin: 50px 0px;
+        &::before {
+          height: 0;
+        }
+      }
+    }
   }
 }

@@ -61,3 +61,20 @@ table {
     pointer-events: none;
   }
 }
+@media only screen and(max-width: 500px) {
+  table {
+    thead {
+      font-size: 18px;
+      background: linear-gradient($primary-color, $second-color);
+
+      tr {
+        height: 20px;
+      }
+    }
+    tbody {
+      td {
+        height: auto;
+      }
+    }
+  }
+}

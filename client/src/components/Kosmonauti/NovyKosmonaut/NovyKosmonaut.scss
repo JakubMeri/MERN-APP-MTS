@@ -104,4 +104,76 @@ $second-color: #1838c7;
       border-top: 30px solid rgb(245, 245, 245);
     }
   }
+  .close-panel {
+    display: none;
+  }
+}
+@media only screen and(max-width: 760px) {
+  .input-component {
+    position: fixed;
+    left: -100%;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  .closed-panel {
+    left: -100%;
+  }
+  .opened-panel {
+    left: 0%;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .close-panel {
+    display: block !important;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    font-size: 25px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  .form {
+    h1 {
+      margin: 0 !important;
+    }
+    label {
+      margin: 0px 0px !important;
+      font-size: 16px !important;
+    }
+    input {
+      margin: 0 !important;
+    }
+    button {
+      margin: 5px 0 !important;
+    }
+  }
+}
+@media only screen and(max-width: 500px) {
+  .form {
+    box-shadow: none !important;
+  }
+
+  .error-bubble {
+    left: 20px !important;
+  }
+}
+
+@media only screen and(max-width: 320px) {
+  .form {
+    h1 {
+      margin-bottom: 50px !important;
+    }
+    label {
+      margin: 5px 0px !important;
+    }
+    input {
+      margin: 0 !important;
+    }
+  }
 }

@@ -91,4 +91,10 @@
 .delete-box button:hover::before {
   width: 100%;
 }
+
+@media only screen and (max-width: 500px) {
+  .delete-box {
+    width: 95%;
+  }
+}
 /*# sourceMappingURL=DeleteUser.css.map */

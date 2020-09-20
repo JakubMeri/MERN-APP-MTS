@@ -38,4 +38,20 @@
             transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-width: 760px) {
+  .table {
+    padding: 0px;
+    width: 100vw !important;
+    overflow-x: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .table {
+    padding: 0px;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
 /*# sourceMappingURL=KosmonautiList.css.map */

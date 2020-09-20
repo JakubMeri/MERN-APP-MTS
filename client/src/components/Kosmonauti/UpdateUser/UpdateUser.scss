@@ -12,7 +12,7 @@ $cell-color: rgb(177, 177, 177);
   background: linear-gradient($primary-color, $second-color);
   border: solid 2px white;
   transform: translate(-50%, -50%);
-  z-index: 4;
+  z-index: 10 !important;
   .form-update {
     height: 100%;
     padding: 20px;
@@ -73,6 +73,32 @@ $cell-color: rgb(177, 177, 177);
       &:hover::before {
         width: 100%;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .update-box {
+    bottom: 0 !important;
+    width: 95% !important;
+    height: 70% !important;
+    label {
+      margin: 0 !important;
+    }
+    button {
+      margin: 0 !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .update-box {
+    width: 95%;
+    height: 400px;
+    label {
+      font-size: 14px;
+      margin-top: 5px;
+      color: white;
     }
   }
 }
